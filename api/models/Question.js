@@ -15,6 +15,7 @@ module.exports = {
         },
 	answerType: {
 		type: 'string',
+                required: true,
 		enum: ['single', 'multi', 'free']
 	},
         isHidden: {
@@ -22,11 +23,13 @@ module.exports = {
                 defaultsTo: false
         },
         answers: {
-                collection: 'answer'
-        }
+                collection: 'answer',
+                via: 'question'
+        },
 	test: {
-		model: 'test'
-	}	
+		model: 'test',
+                required: true
+ 	}	
 
   }
 };

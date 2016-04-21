@@ -19,6 +19,10 @@ module.exports = {
                 type: 'boolean',
                 defaultsTo: false
         },
+        question: {
+                model: 'question',
+                required: true
+        }
   }
 };
 
