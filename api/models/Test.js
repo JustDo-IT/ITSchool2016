@@ -16,8 +16,16 @@ module.exports = {
 		type: 'boolean',
 		defaultsTo: true
 	},
-	startDate: 'datetime',
-	endDate: 'datetime',
+	startDate: {
+	type: 'datetime',
+	defaultsTo: null
+//        defaultsTo: new Date(0)
+ 	},
+	endDate:{
+        type: 'datetime',
+	defaultsTo: null
+//        defaultsTo: new Date(8999,12,31)
+        },
 	isHidden: {
 		type: 'boolean',
                 defaultsTo: false

@@ -10,7 +10,7 @@ module.exports = {
 
 	var myQuery = Test.find();
 	myQuery.where({'isPublic':true, 
-or:[{'endDate':{'>':new Date()}},{'endDate':{'<':new Date(0)}}]});
+or:[{'endDate':{'>':new Date()}},{'endDate':NaN}]});
 	myQuery.exec(function afterFind(err, tests)
 {
 	if(err) return "";
