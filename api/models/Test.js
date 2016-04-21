@@ -8,11 +8,6 @@
 module.exports = {
 
   attributes: {
-	code: {
-		type: 'integer',
-		autoIncrement: true,
-		unique: true
-	},
 	description: {
 		type: 'string',
 		required: true
