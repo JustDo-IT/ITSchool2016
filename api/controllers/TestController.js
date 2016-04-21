@@ -21,9 +21,13 @@ module.exports = {
  available: function (req, res) {
 
         var myQuery = Test.find();
+	var d = new Date();
+	var n = d.toISOString();
         myQuery.where({'isPublic':true,
-or:[{'endDate':{'>':pgFormatDate(new Date())}},{'endDate':null}],
-or:[{'startDate':{'<':new Date()}},{'startDate':null}],
+//or:[{'endDate':{'>':pgFormatDate(new Date())}},{'endDate':null}],
+or:[{'endDate':{'>':n}},{'endDate':null}],
+//or:[{'startDate':{'<':new Date()}},{'startDate':null}],
+//'endDate':{'>':n},
 'isHidden':false
 });
         myQuery.exec(function afterFind(err, tests)
