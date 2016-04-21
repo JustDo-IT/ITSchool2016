@@ -24,7 +24,9 @@ module.exports = {
         answers: {
                 collection: 'answer'
         }
-	
+	test: {
+		model: 'test'
+	}	
 
   }
 };

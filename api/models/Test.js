@@ -31,7 +31,8 @@ module.exports = {
                 defaultsTo: false
 	},
 	questions: {
-		collection: 'question'
+		collection: 'question',
+		via: 'test'
 	}
   }
 };
