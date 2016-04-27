@@ -19,12 +19,10 @@ module.exports = {
 	startDate: {
 	type: 'datetime',
 	defaultsTo: null
-//        defaultsTo: new Date(0)
  	},
 	endDate:{
         type: 'datetime',
 	defaultsTo: null
-//        defaultsTo: new Date(8999,12,31)
         },
 	isHidden: {
 		type: 'boolean',

@@ -13,7 +13,7 @@ module.exports = {
                 required: true
         },
 	picture: {
-		type: 'binary'
+		type: 'picture'
 	},
         isHidden: {
                 type: 'boolean',

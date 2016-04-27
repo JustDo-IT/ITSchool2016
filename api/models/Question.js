@@ -13,6 +13,15 @@ module.exports = {
                 type: 'string',
                 required: true
         },
+/*	picture: {
+		type: 'picture'
+	},
+*/
+        picture: {
+                collection: 'picture',
+                via: 'question'
+        },
+
 	answerType: {
 		type: 'string',
                 required: true,
@@ -29,7 +38,8 @@ module.exports = {
 	test: {
 		model: 'test',
                 required: true
- 	}	
+ 	},
+	pictureFd: 'string'
 
   }
 };
