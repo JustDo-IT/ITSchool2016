@@ -13,14 +13,6 @@ module.exports = {
                 type: 'string',
                 required: true
         },
-/*	picture: {
-		type: 'picture'
-	},
-*/
-        picture: {
-                collection: 'picture',
-                via: 'question'
-        },
 
 	answerType: {
 		type: 'string',
