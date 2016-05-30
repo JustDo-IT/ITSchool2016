@@ -22,7 +22,8 @@ module.exports = {
         question: {
                 model: 'question',
                 required: true
-        }
+        },
+        pictureFd: 'string'
   }
 };
 
