@@ -42,7 +42,10 @@
 config/local.js
 config/waterlock.js
 config/connections.js
+<<<<<<< HEAD
 
+=======
+>>>>>>> c33bf05b665f85c5fe4c3c9edc7dfb26ece37ef6
 
 
 ################################################
