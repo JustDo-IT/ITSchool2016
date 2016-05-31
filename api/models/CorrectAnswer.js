@@ -12,6 +12,10 @@ module.exports = {
                 model: 'test',
                 required: true
         },
+	question: {
+		model: 'question',
+		required: true
+	},
         answer: {
                 model: 'answer'
         },
