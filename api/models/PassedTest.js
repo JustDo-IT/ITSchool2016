@@ -24,6 +24,10 @@ module.exports = {
                 type: 'string',
                 required: true
         },
+	answers: {
+		collection: 'passedTestAnswer',
+		via: 'passedTest'
+	}
 
   }
 };
