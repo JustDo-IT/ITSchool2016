@@ -43,5 +43,11 @@ module.exports = {
                  return res.ok();
         });
 
-  }
+  },
+
+ destroyTable: function(req,res) {
+	table = req.param('table');
+	eval(table + ".destroy({}).exec(function (err){ if (err) { return res.negotiate(err);} sails.log('Any "+ table +" have now been deleted!'); return res.ok();}); ");
+	}
+
 }
