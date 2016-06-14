@@ -26,12 +26,13 @@ function isCorrectAnswer(currAns){
 		currAns.isCorrect = corr;
                 }
             else if(qType == "multi"){
+		corr = false;
 		for(i=0;i<corrAnsws.lenght;i++){
-                    corr = corr || currAns.answer == corrAnsws.answer;
-		    }
+            	    corr = corr || currAns.answer == corrAnsws.answer;
+		}
     		currAns.isCorrect = corr;
 		}
-            PassedTestAnswer.create(currAns).exec(function createCB(err_a, created_a){
+            PassedTestAnswer.create(currAns).exec(function createC(err_a, created_a){
                 });
             });
         });
@@ -54,9 +55,10 @@ module.exports = {
                     isCorrectAnswer(currAns);
                     //PassedTestAnswer.create(answers).exec(function createCB(err_a, created_a){
                         //});
-
-                    res.json(created_t);
-                    }
+		    jsn = JSON.stringify(created_t);
+		    res.end(jsn);
+                    //res.jsonp(created_t);
+		    }
         });
     },
 
