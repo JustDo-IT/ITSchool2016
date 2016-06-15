@@ -26,7 +26,7 @@ function isCorrectAnswer(currAns){
 		}
             else if(qType == "single"){
 		if(corrAnsws[0] == undefined)
-		    corr = false
+		    corr = false;
 		else
 		    corr = (currAns.answer == corrAnsws[0].answer);
 		currAns.isCorrect = corr;
