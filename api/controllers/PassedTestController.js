@@ -18,11 +18,17 @@ function isCorrectAnswer(currAns){
         qCorrAns.exec(function afterFind(err, corrAnsws){
 
 	    if(qType == "free"){
-		corr = currAns.textanswer == corrAnsws[0].textanswer;
+		if(corrAnsws[0] == undefined)
+		    corr = false;
+		else
+		    corr = currAns.textanswer == corrAnsws[0].textanswer;
 		currAns.isCorrect = corr;
 		}
             else if(qType == "single"){
-		corr = (currAns.answer == corrAnsws[0].answer);
+		if(corrAnsws[0] == undefined)
+		    corr = false
+		else
+		    corr = (currAns.answer == corrAnsws[0].answer);
 		currAns.isCorrect = corr;
                 }
             else if(qType == "multi"){
