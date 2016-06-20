@@ -77,9 +77,10 @@ module.exports = {
 	var qAns = PassedTestAnswer.find();
 	qAns.where({passedTest: p_id});
 	qAns.exec(function afterFind(err, answers){
+	    console.log(answers);
 	    for(i = 0; i< answers.length; i++){
 		quest++;
-		cquest = cquest + answers[i].isCorrect ? 1 : 0;
+		cquest = cquest + (answers[i].isCorrect ? 1 : 0);
 	    }
 	    res.json({"allQuestions": quest, "correctAnswers" : cquest, "executionPercentage": cquest/quest*100});
         });
